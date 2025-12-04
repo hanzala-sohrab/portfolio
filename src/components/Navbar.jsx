@@ -10,7 +10,7 @@ const Navbar = () => {
                 <img src="/images/logo.svg" alt="logo" />
                 <p className="font-bold">Hanzala&apos;s portfolio</p>
                 <ul>
-                    {navLinks.map(({id, name, type}) => <li key={id} onClick={() => openWindow(type)}>{name}</li>)}
+                    {navLinks.map(({id, name, type}) => <li key={id} onClick={() => openWindow(type)} className="cursor-pointer">{name}</li>)}
                 </ul>
             </div>
             <div>
