@@ -1,7 +1,7 @@
-import {WindowControls} from "#components";
+import { WindowControls } from "#components";
 import WindowWrapper from "#hoc/WindowWrapper.jsx";
-import {ChevronLeft, ChevronRight, Copy, MoveRight, PanelLeft, Plus, Search, Share, ShieldHalf} from "lucide-react";
-import {blogPosts} from "#constants/index.js";
+import { ChevronLeft, ChevronRight, Copy, MoveRight, PanelLeft, Plus, Search, Share, ShieldHalf } from "lucide-react";
+import { blogPosts } from "#constants/index.js";
 
 const Safari = () => {
     return <>
@@ -28,7 +28,7 @@ const Safari = () => {
         </div>
         <div className="blog">
             <h2>My developer blogs</h2>
-            <div className="space-y-8">
+            {/* <div className="space-y-8">
                 {blogPosts.map(({ id, image, title, date, link }) => (
                     <div key={id} className="blog-post">
                         <div className="col-span-2">
@@ -41,7 +41,7 @@ const Safari = () => {
                         </div>
                     </div>
                 ))}
-            </div>
+            </div> */}
         </div>
     </>
 }
