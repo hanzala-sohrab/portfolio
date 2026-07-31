@@ -5,6 +5,11 @@ const navLinks = [
         type: "finder",
     },
     {
+        id: 2,
+        name: "Blog",
+        type: "blog",
+    },
+    {
         id: 3,
         name: "Contact",
         type: "contact",
@@ -45,6 +50,12 @@ const dockApps = [
     {
         id: "safari",
         name: "Articles", // was "Safari"
+        icon: "safari.png",
+        canOpen: true,
+    },
+    {
+        id: "blog",
+        name: "Blog",
         icon: "safari.png",
         canOpen: true,
     },
@@ -486,6 +497,7 @@ const WINDOW_CONFIG = {
     terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    blog: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };

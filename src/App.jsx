@@ -12,6 +12,7 @@ const Finder = lazy(() => import("#windows").then(m => ({ default: m.Finder })))
 const Text = lazy(() => import("#windows").then(m => ({ default: m.Text })));
 const Image = lazy(() => import("#windows").then(m => ({ default: m.Image })));
 const Contact = lazy(() => import("#windows").then(m => ({ default: m.Contact })));
+const Blog = lazy(() => import("#windows").then(m => ({ default: m.Blog })));
 
 const App = () => {
     return (
@@ -27,6 +28,7 @@ const App = () => {
                 <Text />
                 <Image />
                 <Contact />
+                <Blog />
             </Suspense>
         </main>
     )
