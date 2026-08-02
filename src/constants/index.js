@@ -338,7 +338,7 @@ const WORK_LOCATION = {
                     ],
                 },
                 {
-                    id: 2,
+                    id: 8,
                     name: "GNOME",
                     icon: "/images/folder.png",
                     kind: "folder",
@@ -348,14 +348,14 @@ const WORK_LOCATION = {
                         {
                             id: 1,
                             name: "News Flash PR",
-                            icon: "/images/safari.png",
+                            icon: "/images/io.gitlab.news_flash.NewsFlash.svg",
                             kind: "file",
                             fileType: "url",
                             href: "https://gitlab.com/news-flash/news_flash_gtk/-/merge_requests/257",
                             position: "top-5 left-10",
                         },
                         {
-                            id: 2,
+                            id: 9,
                             name: "Nautilus/Files",
                             icon: "/images/folder.png",
                             kind: "folder",
@@ -365,7 +365,7 @@ const WORK_LOCATION = {
                                 {
                                     id: 1,
                                     name: "PR 2070",
-                                    icon: "/images/safari.png",
+                                    icon: "/images/org.gnome.Nautilus.svg",
                                     kind: "file",
                                     fileType: "url",
                                     href: "https://gitlab.gnome.org/GNOME/nautilus/-/merge_requests/2070",
@@ -374,7 +374,7 @@ const WORK_LOCATION = {
                                 {
                                     id: 2,
                                     name: "PR 2080",
-                                    icon: "/images/safari.png",
+                                    icon: "/images/org.gnome.Nautilus.svg",
                                     kind: "file",
                                     fileType: "url",
                                     href: "https://gitlab.gnome.org/GNOME/nautilus/-/merge_requests/2080",
@@ -387,7 +387,7 @@ const WORK_LOCATION = {
                 {
                     id: 3,
                     name: "Graphify PR",
-                    icon: "/images/safari.png",
+                    icon: "/images/graphify.ico",
                     kind: "file",
                     fileType: "url",
                     href: "https://github.com/Graphify-Labs/graphify/pull/663",
@@ -396,7 +396,7 @@ const WORK_LOCATION = {
                 {
                     id: 4,
                     name: "Next.js PR",
-                    icon: "/images/safari.png",
+                    icon: "/images/Next.js.svg",
                     kind: "file",
                     fileType: "url",
                     href: "https://github.com/vercel/next.js/pull/88928",
