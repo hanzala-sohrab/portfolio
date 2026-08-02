@@ -334,20 +334,20 @@ const WORK_LOCATION = {
                     description: [
                         "A collection of my open-source contributions.",
                         "I am actively contributing to popular open-source projects, focusing on adding new features, fixing bugs, and improving performance.",
-                        "Here are some of my accepted pull requests across various repositories like GNOME Nautilus, Next.js, Graphify, and News Flash.",
+                        "Here are some of my accepted pull requests across various repositories like GNOME Nautilus, Next.js, Graphify, and Newsflash.",
                     ],
                 },
                 {
                     id: 8,
                     name: "GNOME",
-                    icon: "/images/folder.png",
+                    icon: "/images/gnome-icon.png",
                     kind: "folder",
                     position: "top-5 right-20",
                     windowPosition: "top-[40vh] left-10",
                     children: [
                         {
                             id: 1,
-                            name: "News Flash PR",
+                            name: "Newsflash PR",
                             icon: "/images/io.gitlab.news_flash.NewsFlash.svg",
                             kind: "file",
                             fileType: "url",
