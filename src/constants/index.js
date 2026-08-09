@@ -268,7 +268,7 @@ const WORK_LOCATION = {
             name: "Task Manager",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-52 right-80",
+            position: "top-52 left-80",
             windowPosition: "top-[20vh] left-7",
             children: [
                 {
@@ -401,6 +401,40 @@ const WORK_LOCATION = {
                     fileType: "url",
                     href: "https://github.com/vercel/next.js/pull/88928",
                     position: "top-32 right-20",
+                },
+            ],
+        },
+
+        // ▶ Project 4
+        {
+            id: 8,
+            name: "Speech to Text",
+            icon: "/images/folder.png",
+            kind: "folder",
+            position: "top-52 left-5",
+            windowPosition: "top-[46vh] left-7",
+            children: [
+                {
+                    id: 1,
+                    name: "speech-to-text.txt",
+                    icon: "/images/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    position: "top-5 left-10",
+                    description: [
+                        "A speech-to-text application.",
+                        "Converts spoken audio into written text efficiently.",
+                        "A useful tool for generating transcripts and improving accessibility.",
+                    ],
+                },
+                {
+                    id: 2,
+                    name: "speech-to-text",
+                    icon: "/images/safari.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "https://github.com/hanzala-sohrab/speech-to-text",
+                    position: "top-5 right-20",
                 },
             ],
         },
