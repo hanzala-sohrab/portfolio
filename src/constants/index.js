@@ -77,26 +77,72 @@ const dockApps = [
 const blogPosts = [
     {
         id: 1,
-        date: "Sep 2, 2025",
-        title:
-            "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-        image: "/images/blog1.png",
-        link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+        date: "Jul 25, 2026",
+        title: "Refining UX in GNOME Files (Nautilus)",
+        image: "/images/org.gnome.Nautilus.svg",
+        content: `
+            <p>Contributing to the core desktop experience is always rewarding. I recently had two pull requests merged into <strong>GNOME Files (Nautilus)</strong> that focus on refining the user experience in the properties dialog.</p>
+            <br/>
+            <p>The first issue (PR !2070) involved a redundant UI element. When a user opened the properties dialog for a file from within its parent folder, the "Open Parent Folder" button was still being displayed. This was completely redundant and slightly confusing, as the user was already in the parent folder. I modified the logic to dynamically hide this button in this specific context, cleaning up the dialog's interface.</p>
+            <br/>
+            <p>However, this introduced an edge case (addressed in PR !2080). If a user opened the properties dialog, then closed the parent folder window but kept the properties dialog open (detaching it), they might actually <em>want</em> to use that "Open Parent Folder" button. I updated the behavior to re-show the parent folder row when the dialog becomes detached from its original view.</p>
+            <br/>
+            <p>These small, thoughtful adjustments are what make desktop environments feel polished and intuitive. It was a great experience diving into GTK and GNOME's codebase to make these improvements.</p>
+            <br/>
+            <p><strong>Pull Requests:</strong> <a href="https://gitlab.gnome.org/GNOME/nautilus/-/merge_requests/2070" target="_blank" rel="noreferrer noopener" class="text-blue-600 hover:underline">!2070</a>, <a href="https://gitlab.gnome.org/GNOME/nautilus/-/merge_requests/2080" target="_blank" rel="noreferrer noopener" class="text-blue-600 hover:underline">!2080</a></p>
+        `
     },
     {
         id: 2,
-        date: "Aug 28, 2025",
-        title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-        image: "/images/blog2.png",
-        link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
+        date: "May 2, 2026",
+        title: "Optimizing Graphify: Parallel AST Extraction",
+        image: "/images/graphify.ico",
+        content: `
+            <p>Recently, I contributed to <strong>Graphify</strong> by implementing parallel AST (Abstract Syntax Tree) extraction to eliminate CPU bottlenecks on large repositories.</p>
+            <br/>
+            <p>In the original implementation, the <code>extract()</code> method relied on a single-threaded process. This became a major bottleneck when dealing with extensive Python codebases because <code>importlib.import_module</code> inherently holds the Python Global Interpreter Lock (GIL). This meant that even though AST extraction could theoretically be heavily parallelized, the GIL forced execution to be effectively sequential, underutilizing CPU resources and resulting in long execution times.</p>
+            <br/>
+            <p>To resolve this, I introduced the <code>ProcessPoolExecutor</code> from Python's <code>concurrent.futures</code> module. By distributing the extraction tasks across multiple processes instead of threads, we completely bypass the GIL constraints. This allows Graphify to fully leverage multi-core processors, resulting in dramatically faster extraction times for large projects.</p>
+            <br/>
+            <p>I also integrated benchmarking support to accurately measure the performance gains. This contribution not only improves the immediate user experience by reducing wait times but also scales Graphify's capabilities to handle significantly larger codebases than before.</p>
+            <br/>
+            <p><strong>Pull Request:</strong> <a href="https://github.com/Graphify-Labs/graphify/pull/663" target="_blank" rel="noreferrer noopener" class="text-blue-600 hover:underline">#663</a></p>
+        `
     },
     {
         id: 3,
-        date: "Aug 15, 2025",
-        title: "The Ultimate Guide to Mastering GSAP Animations",
-        image: "/images/blog3.png",
-        link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+        date: "Jan 23, 2026",
+        title: "Improving Documentation in Next.js",
+        image: "/images/Next.js.svg",
+        content: `
+            <p>Documentation is the lifeblood of any open-source framework, and I recently made a contribution to <strong>Next.js</strong> to ensure developers have accurate and up-to-date information.</p>
+            <br/>
+            <p>While reviewing the Next.js documentation regarding third-party scripts, specifically Partytown, I noticed that the reference URLs were outdated. The documentation was still pointing to <code>builder.io</code>, which was the old home for Partytown. Partytown has since migrated to the Qwik ecosystem.</p>
+            <br/>
+            <p>My pull request updated all Partytown documentation links to point to the correct <code>qwik.dev</code> URLs. Additionally, I updated the installation package references in the guide to ensure developers are pulling the right dependencies when setting up Partytown in their Next.js applications.</p>
+            <br/>
+            <p>While a documentation update might seem small compared to a core feature change, it prevents frustration and saves time for thousands of developers who rely on the Next.js docs daily. It's a reminder that every contribution, no matter the size, plays a crucial role in the ecosystem.</p>
+            <br/>
+            <p><strong>Pull Request:</strong> <a href="https://github.com/vercel/next.js/pull/88928" target="_blank" rel="noreferrer noopener" class="text-blue-600 hover:underline">#88928</a></p>
+        `
     },
+    {
+        id: 4,
+        date: "Sep 26, 2025",
+        title: "Adding Keyboard Shortcuts in Newsflash",
+        image: "/images/io.gitlab.news_flash.NewsFlash.svg",
+        content: `
+            <p>Accessibility and power-user features go hand in hand. I contributed a quality-of-life improvement to <strong>Newsflash</strong>, a popular feed reader for the Linux desktop.</p>
+            <br/>
+            <p>Newsflash supports various keyboard shortcuts to navigate articles and manage feeds efficiently. However, these shortcuts were not easily discoverable unless a user specifically looked them up in the documentation or settings. To solve this, I added keyboard shortcut information directly into the tooltips of the relevant buttons.</p>
+            <br/>
+            <p>Now, when a user hovers over a button like "Next Article" or "Mark as Read", the tooltip not only describes the action but also displays the associated keybinding. This subtle change significantly flattens the learning curve for power users, encouraging the adoption of keyboard navigation and making the overall application feel much more responsive and user-friendly.</p>
+            <br/>
+            <p>Working on this PR involved diving into the GTK UI framework used by Newsflash and ensuring the tooltips dynamically populated with the correct shortcut keys.</p>
+            <br/>
+            <p><strong>Pull Request:</strong> <a href="https://gitlab.com/news-flash/news_flash_gtk/-/merge_requests/257" target="_blank" rel="noreferrer noopener" class="text-blue-600 hover:underline">!257</a></p>
+        `
+    }
 ];
 
 const techStack = [
